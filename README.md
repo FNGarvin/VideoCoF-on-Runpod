@@ -97,7 +97,7 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 fast_infer.py \
   --videocof_path videocof_weight/videocof.safetensors \
   --enable_acceleration_lora \
   --acceleration_lora_path videocof_weight/wan2.1_Text_to_Video_14B_FusionX_LoRA.safetensors \
-  --num_frames 246 \
+  --num_frames 121 \
   --source_frames 121 \
   --reasoning_frames 4 \
   --repeat_rope
@@ -111,7 +111,6 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 fast_infer.py \
 | `--acceleration_lora_path` | `...FusionX_LoRA.safetensors` | Loads the high-performance $\text{FusionX LoRA}$ to enhance output quality and speed. |
 | **`--reasoning_frames`** | `4` | **CRITICAL:** This enables the $\text{Chain-of-Thought}$ ($\text{CoT}$) mechanism, checking consistency over 4 frames for superior temporal stability and artifact reduction. |
 | `--source_frames` | `121` | The number of input frames used for the generation process. |
-| **`--num_frames`** | `246` | The total length of the output video in frames. This value is typically calculated as **$\text{Source Frames} + (\text{Source Frames} - 1)$**. For the example: $121 + (121 - 1) = 241$. The example uses 246 for demonstration. |
 
 ---
 
