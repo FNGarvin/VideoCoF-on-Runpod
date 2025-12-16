@@ -50,7 +50,7 @@ This process guides you from template deployment to execution in the hosted envi
     ![File Manager Link](assets/fileman.jpg)
 
 2.  **Navigate to Project Folder:** Double-click the **`VideoCoF`** folder.
-3.  **Upload Video:** Click the **Upload Icon** (cloud icon with an up arrow), select the **File** option, and upload your source video file (e.g., `beachdance.mp4`) directly into the `/workspace/VideoCoF` directory.
+3.  **Upload Video:** Click the **Upload Icon** (cloud icon with an up arrow), select the **File** option, and upload your source video file (e.g., `beachdance.mp4`) directly into the `/workspace/VideoCoF` directory.  It's a good idea to ensure your video is of dimensions that each divide evenly by 16 pixels.
 
     ![Upload File Interface](assets/upload.jpg)
 
@@ -82,7 +82,7 @@ The Zasper terminal provides a clean interface for pasting the lengthy command.
 
 ![Zasper Terminal View with Command](assets/zasper.jpg)
 
-Paste and run the following command in the terminal. Remember to adjust parameters (like `--video_path` and `--prompt`) for your specific use case.
+Paste and run the following command in the terminal. Remember to adjust parameters (like `--video_path` and `--prompt`) for your specific use case.  Be prepared for very chatty output, including some potentially confusing warnings.  And due to the scale of data being moved around, some of the steps are so slow as to appear hung.  Be patient.
 
 ```bash
 # Corrects the output video speed to 24 FPS (optional, but recommended)
